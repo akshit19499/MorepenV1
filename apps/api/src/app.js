@@ -2,12 +2,15 @@ import cors from "cors";
 import express from "express";
 import {
   apiCategories,
-  contactTopics,
+  contactServices,
+  filterProducts,
   financialHighlights,
   investorDocuments,
-  pages,
+  news,
+  pageTitles,
   products,
   publications,
+  qualityRecords,
   routes
 } from "@morepen/shared";
 
@@ -22,37 +25,13 @@ export function createApp() {
   });
 
   app.get("/api/navigation", (_req, res) => {
-    res.json({ routes });
-  });
-
-  app.get("/api/pages", (_req, res) => {
-    res.json({ pages });
-  });
-
-  app.get("/api/pages/*", (req, res) => {
-    const path = `/${req.params[0] || ""}`.replace(/\/$/, "") || "/";
-    const page = pages[path];
-    if (!page) {
-      res.status(404).json({ error: "Page not found" });
-      return;
-    }
-    res.json({ path, page });
+    res.json({ routes, titles: pageTitles });
   });
 
   app.get("/api/products", (req, res) => {
-    const { category = "All", q = "" } = req.query;
-    const needle = String(q).trim().toLowerCase();
-    const filtered = products.filter((product) => {
-      const categoryMatches = category === "All" || product.category === category;
-      const searchMatches =
-        !needle ||
-        [product.name, product.category, product.therapy, ...(product.forms || [])].some((value) =>
-          String(value).toLowerCase().includes(needle)
-        );
-      return categoryMatches && searchMatches;
-    });
-
-    res.json({ categories: apiCategories, products: filtered, total: filtered.length });
+    const { category = "All", q = "", sort = "featured" } = req.query;
+    const filtered = filterProducts({ category, query: q, sort });
+    res.json({ categories: apiCategories, products: filtered, total: filtered.length, portfolioTotal: products.length });
   });
 
   app.get("/api/investor-documents", (req, res) => {
@@ -71,18 +50,24 @@ export function createApp() {
     res.json({ highlights: financialHighlights });
   });
 
-  app.get("/api/publications", (_req, res) => {
-    res.json({ publications });
+  app.get("/api/publications", (req, res) => {
+    const { type = "All" } = req.query;
+    const items = type === "All" ? news : news.filter((item) => item.type === type);
+    res.json({ publications, news: items });
+  });
+
+  app.get("/api/quality-records", (_req, res) => {
+    res.json({ records: qualityRecords });
   });
 
   app.get("/api/contact-topics", (_req, res) => {
-    res.json({ topics: contactTopics });
+    res.json({ topics: contactServices });
   });
 
   app.post("/api/enquiries", (req, res) => {
-    const { name, email, company, topic, message } = req.body || {};
-    if (!name || !email || !topic || !message) {
-      res.status(400).json({ error: "Name, email, topic and message are required." });
+    const { name, email, company, country, service, stage, message } = req.body || {};
+    if (!name || !email || !company || !service || !message) {
+      res.status(400).json({ error: "Name, company, email, area of interest and message are required." });
       return;
     }
 
@@ -90,7 +75,7 @@ export function createApp() {
       ok: true,
       message:
         "Enquiry validated. Persistence and email delivery should be connected after final approval.",
-      enquiry: { name, email, company: company || "", topic, message }
+      enquiry: { name, email, company, country: country || "", service, stage: stage || "", message }
     });
   });
 

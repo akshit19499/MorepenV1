@@ -7,18 +7,21 @@
     "dev": "vite --host 0.0.0.0 --port 5173",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0 --port 5173",
-    "lint": "eslint . --ext js,jsx --max-warnings 0"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@morepen/shared": "file:../../packages/shared",
     "@vitejs/plugin-react": "^5.0.0",
-    "vite": "^7.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.0.0",
-    "lucide-react": "^0.468.0"
+    "vite": "^7.0.0"
   },
   "devDependencies": {
-    "eslint": "^9.0.0"
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "globals": "^15.0.0"
   }
 }

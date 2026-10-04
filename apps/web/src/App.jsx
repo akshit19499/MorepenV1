@@ -1,14 +1,9 @@
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import { pages } from "@morepen/shared";
-import { SiteFooter } from "./components/SiteFooter.jsx";
-import { SiteHeader } from "./components/SiteHeader.jsx";
-import { ApiPage } from "./pages/ApiPage.jsx";
-import { CompanyPage } from "./pages/CompanyPage.jsx";
-import { ContactPage } from "./pages/ContactPage.jsx";
-import { GenericPage } from "./pages/GenericPage.jsx";
-import { HomePage } from "./pages/HomePage.jsx";
-import { InvestorsPage } from "./pages/InvestorsPage.jsx";
+import { PageFrame } from "./components/layout/PageFrame.jsx";
+import { SiteLayout } from "./components/layout/SiteLayout.jsx";
+import { pageRoutes } from "./routes.jsx";
 
+// Old prototype bookmarks used "#/route?query"; send them to the clean path.
 function HashRouteBridge() {
   const location = useLocation();
   if (location.hash?.startsWith("#/")) {
@@ -21,23 +16,17 @@ export default function App() {
   return (
     <>
       <HashRouteBridge />
-      <SiteHeader />
-      <main id="main-content">
+      <SiteLayout>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/company" element={<CompanyPage />} />
-          <Route path="/api" element={<ApiPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/investors" element={<InvestorsPage />} />
-          {Object.keys(pages)
-            .filter((path) => !["/", "/company", "/api", "/contact", "/investors"].includes(path))
-            .map((path) => (
-              <Route key={path} path={path} element={<GenericPage path={path} />} />
-            ))}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          {pageRoutes.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={<PageFrame title={route.title}>{route.element}</PageFrame>}
+            />
+          ))}
         </Routes>
-      </main>
-      <SiteFooter />
+      </SiteLayout>
     </>
   );
 }

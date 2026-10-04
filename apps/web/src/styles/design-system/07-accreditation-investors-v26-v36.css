@@ -1,0 +1,505 @@
+/* v26 — accreditation carousel option 2 */
+.accreditation-strip-v26 {
+  margin-top:22px;
+  position:relative;
+  display:grid;
+  grid-template-columns:38px minmax(0,1fr) 38px;
+  align-items:center;
+  gap:8px;
+}
+.accreditation-viewport-v26 {
+  overflow:hidden;
+  background:#edf8fe;
+  border-radius:0;
+  padding:14px 6px;
+  box-shadow:none;
+}
+.accreditation-track-v26 {
+  display:flex;
+  gap:9px;
+  width:max-content;
+  animation:accreditationScrollV26 112s linear infinite;
+  will-change:transform;
+}
+.accreditation-strip-v26:hover .accreditation-track-v26 {
+  animation-play-state:paused;
+}
+.accreditation-card-v26 {
+  width:190px;
+  height:126px;
+  flex:0 0 190px;
+  background:#fff;
+  border:1px solid #e1e7ee;
+  border-radius:8px;
+  display:grid;
+  place-items:center;
+  padding:6px 8px;
+  box-shadow:0 2px 8px rgba(5,45,95,.025);
+}
+.accreditation-card-v26:nth-child(2n) {
+  background:#f8fafc;
+}
+.accreditation-card-v26 img {
+  display:block;
+  max-width:176px;
+  max-height:104px;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+}
+.accreditation-arrow-v26 {
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:1px solid rgba(0,90,156,.20);
+  background:#f8fcff;
+  color:var(--dodgers);
+  font-size:19px;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  box-shadow:none;
+}
+.accreditation-arrow-v26:hover {
+  background:#fff;
+  border-color:rgba(0,90,156,.40);
+}
+.accreditation-dots-v26 {
+  grid-column:2;
+  display:flex;
+  justify-content:center;
+  gap:7px;
+  margin-top:8px;
+}
+.accreditation-dots-v26 span {
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#ccecff;
+  display:block;
+}
+.accreditation-dots-v26 span:first-child {
+  background:var(--deep-sky);
+}
+@media(max-width:1100px) {
+  .accreditation-card-v26 {
+    width:174px;
+    flex-basis:174px;
+    height:116px;
+  }
+  .accreditation-card-v26 img {
+    max-width:160px;
+    max-height:94px;
+  }
+}
+@media(max-width:900px) {
+  .accreditation-strip-v26 {
+    grid-template-columns:32px minmax(0,1fr) 32px;
+    gap:6px;
+  }
+  .accreditation-arrow-v26 {
+    width:30px;
+    height:30px;
+  }
+  .accreditation-card-v26 {
+    width:158px;
+    flex-basis:158px;
+    height:108px;
+  }
+  .accreditation-card-v26 img {
+    max-width:146px;
+    max-height:88px;
+  }
+}
+@media(max-width:600px) {
+  .accreditation-strip-v26 {
+    grid-template-columns:1fr;
+  }
+  .accreditation-arrow-v26 {
+    display:none;
+  }
+  .accreditation-dots-v26 {
+    grid-column:1;
+  }
+  .accreditation-viewport-v26 {
+    padding:12px 5px;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .accreditation-card-v26 {
+    width:150px;
+    flex-basis:150px;
+    height:102px;
+  }
+  .accreditation-card-v26 img {
+    max-width:138px;
+    max-height:82px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .accreditation-track-v26 {
+    animation:none;
+  }
+  .accreditation-viewport-v26 {
+    overflow-x:auto;
+    scrollbar-width:thin;
+  }
+  .accreditation-track-v26 .accreditation-card-v26:nth-child(n+10) {
+    display:none;
+  }
+}
+/* v29 — API therapy showcase + compact API support CTA + CDMO phase journey */
+.api-support-actions-v29 {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  margin-top:24px;
+  padding:20px 22px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fff;
+}
+.api-support-actions-v29>div {
+  max-width:760px;
+}
+.api-support-actions-v29 h3 {
+  font-size:1.05rem;
+  margin:0 0 5px;
+}
+.api-support-actions-v29 p {
+  font-size:.86rem;
+  line-height:1.5;
+  margin:0;
+  color:var(--muted);
+}
+.api-support-actions-v29 .buttons {
+  margin:0;
+  flex-shrink:0;
+}
+.cdmo-phase-v29 .phase-card:first-child {
+  background:var(--surface-sky);
+  border-color:var(--brand-blue);
+}
+.cdmo-phase-v29 .small-note {
+  margin-top:16px;
+}
+@media(max-width:1050px) {
+  .api-support-actions-v29 {
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+@media(max-width:650px) {
+  .api-support-actions-v29 .buttons {
+    width:100%;
+  }
+  .api-support-actions-v29 .btn {
+    width:100%;
+    justify-content:center;
+  }
+}
+/* v34 — Investors: important contacts directory */
+.investor-contacts-v34 {
+  background:#fff;
+}
+.investor-contacts-v34 .section-heading {
+  margin-bottom:34px;
+}
+.investor-contacts-v34 .section-heading h2 {
+  margin-bottom:0;
+}
+.investor-contact-grid-v34 {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:42px 34px;
+  align-items:start;
+}
+.investor-contact-card-v34 {
+  min-width:0;
+}
+.investor-contact-card-v34 h3 {
+  margin:0 0 8px;
+  font-size:1.02rem;
+  line-height:1.3;
+  color:var(--ink);
+}
+.investor-contact-card-v34 p {
+  margin:0;
+  font-size:.95rem;
+  line-height:1.55;
+  color:var(--muted);
+}
+.investor-contact-card-v34 strong {
+  color:var(--ink);
+}
+.investor-contact-card-v34 a {
+  color:var(--muted);
+  text-decoration:none;
+  overflow-wrap:anywhere;
+}
+.investor-contact-card-v34 a:hover {
+  color:var(--brand-blue);
+}
+.investor-contact-card-v34.iepf {
+  grid-column:1 / span 2;
+  padding-top:8px;
+}
+.investor-contact-card-v34 .contact-subhead {
+  display:block;
+  margin:0 0 12px;
+  font-weight:700;
+  color:var(--ink);
+}
+.investor-rounding-note-v34 {
+  margin-top:16px;
+  color:var(--muted);
+  font-size:.8rem;
+  line-height:1.5;
+}
+@media(max-width:1000px) {
+  .investor-contact-grid-v34 {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:34px 26px;
+  }
+  .investor-contact-card-v34.iepf {
+    grid-column:auto;
+  }
+}
+@media(max-width:620px) {
+  .investor-contact-grid-v34 {
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+}
+/* v35 — investor relations redesign */
+.investor-section-actions-v35 {
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+.annual-report-grid-v35 {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+}
+.annual-report-card-v35 {
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fff;
+  overflow:hidden;
+  transition:.2s ease;
+}
+.annual-report-card-v35:hover {
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(4,73,137,.09);
+}
+.annual-report-thumb-v35 {
+  aspect-ratio:3/4;
+  background:#eef7fd;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+.annual-report-thumb-v35 img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.annual-report-copy-v35 {
+  padding:18px;
+}
+.annual-report-copy-v35 small {
+  display:block;
+  color:var(--kc);
+  font-weight:800;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.annual-report-copy-v35 h3 {
+  margin:0 0 12px;
+  font-size:1.05rem;
+}
+.investor-contacts-v35 {
+  background:#f8fbfe;
+}
+@media(max-width:1050px) {
+  .annual-report-grid-v35 {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media(max-width:720px) {
+  .annual-report-grid-v35 {
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+}
+@media(max-width:460px) {
+  .annual-report-grid-v35 {
+    grid-template-columns:1fr;
+  }
+}
+/* v36 — investor page hierarchy */
+.investor-kpi-section-v36 {
+  padding-top:56px;
+  padding-bottom:56px;
+}
+.investor-kpi-section-v36 .section-heading {
+  margin-bottom:24px;
+}
+.investor-kpi-section-v36 .financial-cards {
+  margin-top:0;
+}
+.investor-kpi-section-v36 .financial-cards article {
+  min-height:168px;
+}
+.investor-kpi-section-v36 .financial-cards strong {
+  font-size:clamp(2rem,3.5vw,3rem);
+}
+.investor-presentation-grid-v36 {
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:16px;
+  margin-top:26px;
+}
+.investor-presentation-thumb-card-v36 {
+  display:block;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  overflow:hidden;
+  transition:.2s ease;
+  color:inherit;
+  text-decoration:none;
+  min-width:0;
+}
+.investor-presentation-thumb-card-v36:hover {
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(4,73,137,.10);
+  border-color:#b9dff3;
+}
+.investor-presentation-thumb-v36 {
+  aspect-ratio:16/9;
+  background:#f4f8fb;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+.investor-presentation-thumb-v36 img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.investor-presentation-copy-v36 {
+  padding:16px 16px 18px;
+}
+.investor-presentation-copy-v36 small {
+  display:block;
+  color:var(--kc);
+  font-weight:800;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  font-size:.7rem;
+  margin-bottom:6px;
+}
+.investor-presentation-copy-v36 h3 {
+  margin:0 0 8px;
+  font-size:1rem;
+  line-height:1.3;
+}
+.investor-presentation-copy-v36 p {
+  margin:0;
+  color:var(--muted);
+  font-size:.82rem;
+  line-height:1.45;
+}
+.investor-presentation-copy-v36 .text-link {
+  display:inline-block;
+  margin-top:12px;
+}
+.investor-presentation-actions-v36 {
+  display:flex;
+  justify-content:flex-end;
+  margin-top:22px;
+}
+.investor-library-preview-v36 {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-top:24px;
+}
+.investor-library-card-v36 {
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  padding:20px;
+  min-height:174px;
+  display:flex;
+  flex-direction:column;
+}
+.investor-library-card-v36 small {
+  font-size:.68rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:800;
+  color:var(--kc);
+}
+.investor-library-card-v36 h3 {
+  font-size:1rem;
+  margin:10px 0 8px;
+}
+.investor-library-card-v36 p {
+  font-size:.86rem;
+  color:var(--muted);
+  line-height:1.5;
+  margin:0 0 14px;
+}
+.investor-library-chips-v36 {
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  margin-top:auto;
+}
+.investor-library-chips-v36 span {
+  font-size:.7rem;
+  background:#f4f8fb;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:5px 8px;
+  color:#54677d;
+}
+.investor-dynamic-note-v36 {
+  margin-top:18px;
+  padding:14px 16px;
+  border-left:3px solid var(--deep-sky);
+  background:#f7fbff;
+  color:var(--muted);
+  font-size:.86rem;
+  line-height:1.5;
+}
+@media(max-width:1200px) {
+  .investor-presentation-grid-v36 {
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+  .investor-library-preview-v36 {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media(max-width:760px) {
+  .investor-presentation-grid-v36 {
+    grid-template-columns:1fr 1fr;
+  }
+  .investor-library-preview-v36 {
+    grid-template-columns:1fr;
+  }
+  .investor-presentation-actions-v36 {
+    justify-content:flex-start;
+  }
+}
+@media(max-width:500px) {
+  .investor-presentation-grid-v36 {
+    grid-template-columns:1fr;
+  }
+}

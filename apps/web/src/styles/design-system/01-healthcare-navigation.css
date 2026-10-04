@@ -1,0 +1,330 @@
+/* v0.2.0 - grouped Healthcare navigation and distinct business pages. */
+.utility-partner {
+  font-weight:700;
+  color:#FFF;
+  border-left:1px solid #657089;
+  padding-left:20px;
+}
+.nav-wrap {
+  gap:24px;
+}
+.nav-links {
+  gap:22px;
+}
+.nav-group {
+  position:relative;
+}
+.nav-group-toggle {
+  border:0;
+  background:none;
+  color:var(--ink);
+  font-size:12px;
+  font-weight:600;
+  white-space:nowrap;
+  padding:30px 0;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  position:relative;
+  line-height:1.65;
+}
+.nav-group-toggle:after {
+  content:'';
+  position:absolute;
+  bottom:21px;
+  left:0;
+  right:100%;
+  height:2px;
+  background:var(--cyan);
+}
+.nav-group-toggle:hover:after, .nav-group-toggle.section-active:after, .nav-group-toggle[aria-expanded=true]:after {
+  right:0;
+}
+.chevron {
+  font-size:17px;
+  line-height:1;
+  transition:transform .2s;
+}
+.nav-group-toggle[aria-expanded=true] .chevron {
+  transform:rotate(180deg);
+}
+.nav-dropdown {
+  position:absolute;
+  top:100%;
+  right:0;
+  width:340px;
+  background:#FFF;
+  box-shadow:0 18px 45px #17204225;
+  border:1px solid var(--line);
+  padding:23px;
+  z-index:60;
+}
+.nav-dropdown-kicker {
+  font-size:9px;
+  letter-spacing:1.7px;
+  font-weight:700;
+  color:var(--blue);
+  margin-bottom:12px;
+}
+.nav-dropdown a {
+  display:block;
+  padding:13px 10px;
+  border-bottom:1px solid var(--line);
+  min-height:62px;
+}
+.nav-dropdown a:last-child {
+  border-bottom:0;
+}
+.nav-dropdown a:hover, .nav-dropdown a[aria-current=page] {
+  background:var(--ice);
+}
+.nav-dropdown strong {
+  display:block;
+  font-size:14px;
+  font-weight:600;
+  line-height:1.5;
+}
+.nav-dropdown a span {
+  display:block;
+  font-size:11px;
+  color:var(--muted);
+  margin-top:2px;
+}
+.healthcare-subnav {
+  border-bottom:1px solid var(--line);
+  background:#FFF;
+}
+.healthcare-subnav .wrap {
+  display:flex;
+  gap:36px;
+  flex-wrap:wrap;
+}
+.healthcare-subnav a {
+  padding:18px 0;
+  font-size:12px;
+  font-weight:600;
+  border-bottom:3px solid transparent;
+  min-height:48px;
+}
+.healthcare-subnav a[aria-current=page] {
+  color:var(--blue);
+  border-color:var(--blue);
+}
+.healthcare-cards {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+.healthcare-card {
+  background:#FFF;
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+.healthcare-card-copy {
+  padding:32px 34px;
+}
+.healthcare-card-copy h3 {
+  font-size:30px;
+}
+.healthcare-card-copy p {
+  font-size:14px;
+  max-width:430px;
+}
+.healthcare-card-copy .eyebrow {
+  margin-bottom:17px;
+  font-size:10px;
+}
+.portfolio-grid {
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:30px;
+}
+.portfolio-grid>article {
+  background:#FFF;
+  border:1px solid var(--line);
+  padding:35px;
+}
+.portfolio-grid h3 {
+  font-size:27px;
+  margin-top:25px;
+}
+.portfolio-grid p {
+  font-size:14px;
+}
+.portfolio-links {
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+.support-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+}
+.support-grid article+article {
+  border-left:1px solid var(--line);
+  padding-left:45px;
+}
+.support-grid p {
+  font-size:14px;
+}
+.support-grid .text-link {
+  margin-right:16px;
+}
+.roadmap-note {
+  padding:32px;
+  border:1px solid #536079;
+}
+.roadmap-note p {
+  font-size:15px;
+}
+.roadmap-note .text-link {
+  color:#87CEFA;
+}
+.service-route-note {
+  padding:14px 16px;
+  border-left:3px solid var(--blue);
+  background:white;
+  font-size:12px;
+  color:var(--ink);
+  line-height:1.8;
+}
+.footer-main {
+  grid-template-columns:1.3fr 1.2fr .85fr 1fr 1.15fr;
+  gap:26px;
+}
+.empty {
+  grid-column:1/-1;
+}
+@media(min-width:1500px) {
+  .nav-group-toggle {
+    font-size:13px;
+  }
+  .nav-links {
+    gap:27px;
+  }
+}
+@media(max-width:1190px) {
+  .nav-links {
+    gap:17px;
+  }
+  .nav-group-toggle {
+    font-size:11px;
+  }
+}
+@media(max-width:1050px) {
+  .menu-toggle {
+    display:block;
+  }
+  .nav-links {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:#FFF;
+    padding:18px 32px 30px;
+    border-bottom:1px solid var(--line);
+    box-shadow:0 15px 20px #17204210;
+    max-height:80vh;
+    overflow:auto;
+  }
+  .nav-links.open {
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+  }
+  .nav-links>a {
+    font-size:14px;
+    padding:12px 0;
+    min-height:48px;
+  }
+  .nav-links>a:not(.nav-cta):after {
+    bottom:5px;
+  }
+  .nav-group-toggle {
+    font-size:14px;
+    width:100%;
+    text-align:left;
+    justify-content:space-between;
+    padding:12px 0;
+    min-height:48px;
+  }
+  .nav-group-toggle:after {
+    bottom:5px;
+  }
+  .nav-dropdown {
+    position:static;
+    width:100%;
+    box-shadow:none;
+    background:var(--pale);
+    margin:8px 0 15px;
+    padding:16px;
+  }
+  .nav-dropdown a {
+    min-height:65px;
+  }
+  .footer-main {
+    grid-template-columns:1fr 1fr 1fr;
+  }
+  .footer-brand {
+    grid-column:1/-1;
+  }
+  .portfolio-grid>article {
+    padding:25px;
+  }
+}
+@media(max-width:740px) {
+  .utility .wrap {
+    gap:8px;
+  }
+  .utility-links {
+    gap:12px;
+  }
+  .utility-partner {
+    display:none;
+  }
+  .healthcare-cards, .portfolio-grid, .support-grid {
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .healthcare-card-copy {
+    padding:25px;
+  }
+  .healthcare-card-copy h3 {
+    font-size:28px;
+  }
+  .healthcare-subnav .wrap {
+    gap:0;
+  }
+  .healthcare-subnav a {
+    flex:1;
+    min-width:90px;
+    text-align:center;
+    padding:13px 8px;
+    font-size:10px;
+    line-height:1.6;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .support-grid article+article {
+    border-left:0;
+    padding-left:0;
+    border-top:1px solid var(--line);
+    padding-top:28px;
+  }
+  .portfolio-grid h3 {
+    font-size:26px;
+  }
+  .footer-main {
+    grid-template-columns:1fr 1fr;
+  }
+  .service-block h3 {
+    font-size:25px;
+  }
+  .roadmap-note {
+    padding:23px;
+  }
+}

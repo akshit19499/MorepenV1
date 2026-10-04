@@ -1,0 +1,370 @@
+/* The prototype's v49 override block is omitted: its selectors were corrupted by literal "\n" sequences and never applied in browsers. */
+/* v51 - Quality page: compact, smarter evidence tiles + consolidated regulatory credentials */
+.quality-credential-section-v51 {
+  padding-top:54px;
+  padding-bottom:46px;
+  background:#fff;
+}
+.quality-credential-section-v51 .section-heading {
+  margin-bottom:24px;
+}
+.quality-logo-grid-v51 {
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:12px;
+}
+.quality-logo-card-v51 {
+  min-height:96px;
+  border:1px solid var(--border);
+  border-left:5px solid var(--deep-sky);
+  border-radius:12px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 10px;
+  overflow:hidden;
+}
+.quality-logo-card-v51 img {
+  max-width:132px;
+  max-height:64px;
+  object-fit:contain;
+  display:block;
+}
+.quality-logo-card-v51.text-badge {
+  flex-direction:column;
+  gap:4px;
+  text-align:center;
+  color:var(--morepen-blue,#005bac);
+}
+.quality-logo-card-v51.text-badge strong {
+  font-size:18px;
+  letter-spacing:.03em;
+  font-weight:650;
+}
+.quality-logo-card-v51.text-badge span {
+  font-size:10px;
+  color:var(--smoke-text-soft);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.quality-credential-note-v51 {
+  margin:14px 0 0;
+  font-size:11px;
+  color:var(--smoke-text-soft);
+}
+#credential-grid.credential-grid {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+#credential-grid .credential-card {
+  padding:20px 20px 18px;
+  min-height:0;
+  border-radius:12px;
+  border-left:5px solid var(--deep-sky);
+  box-shadow:none;
+}
+#credential-grid .credential-top {
+  margin-bottom:12px;
+  gap:10px;
+  font-size:9px;
+  letter-spacing:.08em;
+}
+#credential-grid .credential-icon svg {
+  width:28px;
+  height:28px;
+}
+#credential-grid .credential-card h3 {
+  font-size:22px;
+  line-height:1.12;
+  letter-spacing:-.35px;
+  margin:0 0 6px;
+  color:var(--morepen-blue,#005bac);
+}
+#credential-grid .credential-headline {
+  font-size:13px;
+  line-height:1.35;
+  margin-bottom:12px;
+  color:var(--smoke-text);
+}
+#credential-grid .credential-card dl {
+  grid-template-columns:76px 1fr;
+  gap:6px 10px;
+  font-size:10.5px;
+  padding:10px 0;
+  margin:0 0 12px;
+}
+#credential-grid .credential-card p:not(.credential-headline) {
+  font-size:11.5px;
+  line-height:1.55;
+  margin:0 0 12px;
+  color:var(--smoke-text);
+}
+#credential-grid .credential-status {
+  font-size:9px;
+  padding:6px 8px;
+  border-radius:999px;
+  margin-top:auto;
+}
+#credential-grid .credential-card>.text-link {
+  margin-top:10px;
+  font-size:10.5px;
+}
+@media(max-width:1100px) {
+  .quality-logo-grid-v51 {
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+  #credential-grid.credential-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media(max-width:700px) {
+  .quality-logo-grid-v51 {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .quality-logo-card-v51 {
+    min-height:88px;
+  }
+  #credential-grid.credential-grid {
+    grid-template-columns:1fr;
+  }
+  #credential-grid .credential-card {
+    padding:18px;
+  }
+}
+/* v51 — Investors contact directory: open, borderless, colour-led */
+.investor-contacts-v34 .investor-contact-grid-v34 {
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  gap:34px 42px!important;
+  align-items:start!important;
+}
+.investor-contacts-v34 .investor-contact-card-v34, .investor-contacts-v34 .investor-contact-card-v34:nth-child(2n), .investor-contacts-v34 .investor-contact-card-v34:nth-child(4), .investor-contacts-v34 .investor-contact-card-v34.iepf {
+  grid-column:auto!important;
+  background:transparent!important;
+  border:0!important;
+  border-left:0!important;
+  border-right:0!important;
+  border-top:0!important;
+  border-bottom:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+  margin:0!important;
+  max-width:none!important;
+  overflow:visible!important;
+}
+.investor-contacts-v34 .investor-contact-card-v34 h3 {
+  color:var(--headline-sky)!important;
+  font-weight:650!important;
+  margin:0 0 11px!important;
+}
+.investor-contacts-v34 .investor-contact-card-v34 strong {
+  color:var(--headline-blue)!important;
+  font-weight:700!important;
+}
+.investor-contacts-v34 .investor-contact-card-v34 p {
+  color:var(--smoke-text)!important;
+  line-height:1.62!important;
+}
+.investor-contacts-v34 .investor-contact-card-v34 .contact-subhead {
+  color:var(--headline-blue)!important;
+  font-weight:600!important;
+  display:block!important;
+  margin-bottom:8px!important;
+}
+.investor-contacts-v34 .investor-contact-card-v34 a {
+  color:var(--sky)!important;
+  font-weight:600!important;
+  text-decoration:none!important;
+}
+.investor-contacts-v34 .investor-contact-card-v34 a:hover {
+  color:var(--blue)!important;
+}
+@media(max-width:1280px) {
+  .investor-contacts-v34 .investor-contact-grid-v34 {
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  }
+}
+@media(max-width:900px) {
+  .investor-contacts-v34 .investor-contact-grid-v34 {
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:30px 34px!important;
+  }
+}
+@media(max-width:600px) {
+  .investor-contacts-v34 .investor-contact-grid-v34 {
+    grid-template-columns:1fr!important;
+    gap:24px!important;
+  }
+}
+/* v52 - Align Home/API/R&D numbering with the CDMO lifecycle hierarchy. */
+.connected-platform-card > .number-kicker {
+  display:block!important;
+  margin:0 0 24px!important;
+  color:var(--brand-blue)!important;
+  font-weight:400!important;
+  letter-spacing:0!important;
+}
+.connected-platform-card > .number-kicker .serial-large {
+  display:block;
+  font-size:32px;
+  line-height:1;
+  font-weight:400;
+  letter-spacing:-.8px;
+  color:var(--brand-blue);
+  font-variant-numeric:tabular-nums;
+}
+.connected-platform-card > .number-kicker .serial-label {
+  display:block;
+  margin-top:12px;
+  font-size:11px;
+  line-height:1.2;
+  font-weight:600;
+  letter-spacing:.095em;
+  color:var(--smoke,#7b8794);
+}
+/* API numbered rows: prominent but still light-weight. */
+.api-collection ~ .section .feature-row > .num, .feature-row > .num {
+  font-size:32px!important;
+  line-height:1!important;
+  font-weight:400!important;
+  letter-spacing:-.8px!important;
+  color:var(--brand-blue)!important;
+  font-variant-numeric:tabular-nums;
+}
+/* R&D Innovation Hub: same large serial treatment, in white on the blue tiles. */
+.rd-future-card > small {
+  display:block!important;
+  font-size:32px!important;
+  line-height:1!important;
+  font-weight:400!important;
+  letter-spacing:-.8px!important;
+  color:#fff!important;
+  margin-bottom:24px!important;
+  font-variant-numeric:tabular-nums;
+}
+@media(max-width:740px) {
+  .connected-platform-card > .number-kicker .serial-large, .feature-row > .num, .rd-future-card > small {
+    font-size:27px!important;
+  }
+}
+/* v54 - R&D principle tiles: serial, descriptor and title separated into a clearer hierarchy. */
+.rd-principle .rd-principle-kicker {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+  margin-bottom:14px;
+}
+.rd-principle .rd-principle-serial {
+  display:block;
+  font-size:31px;
+  line-height:1;
+  font-weight:400;
+  letter-spacing:-.6px;
+  color:#7f8a96;
+  font-variant-numeric:tabular-nums;
+}
+.rd-principle h3 {
+  margin:0 0 10px!important;
+  color:var(--brand-blue);
+  font-size:1.08rem;
+}
+@media(max-width:740px) {
+  .rd-principle .rd-principle-serial {
+    font-size:27px;
+  }
+}
+/* v55 - Home-page numbered tiles use the same editorial hierarchy approved on R&D. */
+.connected-platform-card > .number-kicker {
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:11px!important;
+  margin:0 0 16px!important;
+  color:#7f8a96!important;
+  font-weight:400!important;
+  letter-spacing:0!important;
+}
+.connected-platform-card > .number-kicker .serial-large {
+  display:block!important;
+  font-size:42px!important;
+  line-height:1!important;
+  font-weight:400!important;
+  letter-spacing:-.8px!important;
+  color:#7f8a96!important;
+  font-variant-numeric:tabular-nums;
+}
+.connected-platform-card > .number-kicker .serial-label {
+  display:block!important;
+  margin-top:0!important;
+  font-size:.72rem!important;
+  line-height:1.2!important;
+  font-weight:700!important;
+  letter-spacing:.12em!important;
+  color:#7f8a96!important;
+  text-transform:uppercase;
+}
+.connected-platform-card h3 {
+  color:var(--brand-blue)!important;
+  margin-top:0!important;
+}
+@media(max-width:740px) {
+  .connected-platform-card > .number-kicker .serial-large {
+    font-size:34px!important;
+  }
+}
+/* v57 - CDMO lifecycle serial numerals: large, light and smoke grey. */
+.cdmo-lifecycle article > span:first-child {
+  display:block;
+  font-size:46px !important;
+  line-height:.95 !important;
+  font-weight:400 !important;
+  letter-spacing:-1px !important;
+  color:var(--muted) !important;
+  margin-bottom:30px !important;
+  font-variant-numeric:tabular-nums;
+}
+@media(max-width:740px) {
+  .cdmo-lifecycle article > span:first-child {
+    font-size:38px !important;
+    margin-bottom:24px !important;
+  }
+}
+/* v58 - Home/company numbered tiles: large, light-weight smoke-grey numerals. */
+.company-pillars article > span:first-child {
+  display:block!important;
+  font-size:46px!important;
+  line-height:.95!important;
+  font-weight:400!important;
+  letter-spacing:-1px!important;
+  color:#7f8a96!important;
+  margin-bottom:28px!important;
+  font-variant-numeric:tabular-nums;
+}
+.company-pillars article h3 {
+  margin-top:0!important;
+}
+/* v58 - R&D principle tiles: remove descriptor line; keep a clean serial -> title -> copy hierarchy. */
+.rd-principle .rd-principle-kicker {
+  display:block!important;
+  margin-bottom:26px!important;
+}
+.rd-principle .rd-principle-serial {
+  display:block!important;
+  color:#7f8a96!important;
+  font-weight:400!important;
+}
+.rd-principle h3 {
+  margin-top:0!important;
+}
+@media(max-width:740px) {
+  .company-pillars article > span:first-child {
+    font-size:38px!important;
+    margin-bottom:22px!important;
+  }
+  .rd-principle .rd-principle-kicker {
+    margin-bottom:22px!important;
+  }
+}

@@ -1,0 +1,15 @@
+/* Morepen design system, ported from the approved v58 prototype.
+   Files are contiguous slices of the prototype stylesheet, imported in
+   the original cascade order. Rules for markup that is never rendered
+   were pruned. Keep the order when editing. */
+@import "./00-foundation.css";
+@import "./01-healthcare-navigation.css";
+@import "./02-carousel-healthcare-api-credentials.css";
+@import "./03-design-system-v08.css";
+@import "./04-pages-v11-v13.css";
+@import "./05-home-bands-v14-v19.css";
+@import "./06-company-api-research-v20-v23.css";
+@import "./07-accreditation-investors-v26-v36.css";
+@import "./08-white-first-redesign.css";
+@import "./09-footer-api-investors-v43-v53.css";
+@import "./10-numbering-overrides-v51-v58.css";
