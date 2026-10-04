@@ -1,10 +1,8 @@
 import { externalLinks } from "@morepen/shared";
-import { BadgedServiceGrid } from "../components/healthcare/BadgedServiceGrid.jsx";
-import { BrandVisual, HealthcareSubnav } from "../components/healthcare/index.js";
-import { SupportPanel } from "../components/healthcare/SupportPanel.jsx";
 import { PageHero, SectionHeading, SectionIntro } from "../components/sections/index.js";
 import { ExtLink, GoLink } from "../components/ui/index.js";
 import { otcBrandCards, otcSupport } from "../content/healthcare.js";
+import { BadgedServiceGrid, BrandVisual, HealthcareSubnav, SupportPanel } from "../components/healthcare/index.js";
 
 export function OtcPage() {
   return (

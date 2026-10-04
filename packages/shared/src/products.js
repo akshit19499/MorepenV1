@@ -40,8 +40,6 @@ export const apiSupportCards = [
   { value: "DMF / CEP", title: "Regulatory packages", text: "Market-specific DMFs, CEPs and technical packages across regulated and international markets." }
 ];
 
-export const productsByCategory = (category) =>
-  category === "All" ? products : products.filter((product) => product.category === category);
 
 export function filterProducts({ category = "All", query = "", sort = "featured" } = {}) {
   const needle = String(query).trim().toLowerCase();

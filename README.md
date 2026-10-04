@@ -1,8 +1,10 @@
 # Morepen Website — MERN rebuild
 
-React + Vite frontend, Express API and a shared content package, rebuilt from the
-approved design prototype (`Morepen_Website_Draft_v58.html`). The prototype stays in
-the repository as the design reference only; the production site lives under `apps/`.
+React + Vite frontend, Express API and a shared content package, rebuilt page by page
+from the approved v58 design prototype. The prototype itself is no longer in the
+working tree (it remains in git history, commit `e0a3bd1`); the production site lives
+under `apps/`, and the design and content rules from the handover are in
+`docs/DEVELOPER_HANDOVER.md`.
 
 ## Structure
 
@@ -27,6 +29,8 @@ apps/
 packages/
   shared/src/              routes, products, publications, investor documents, quality
                            records, plants, contacts, leadership — used by web and API
+docs/
+  DEVELOPER_HANDOVER.md    design system, content governance and migration notes
 ```
 
 ## Local development
