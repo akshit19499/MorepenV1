@@ -31,6 +31,8 @@ packages/
 
 ## Local development
 
+Requires **Node 20.19+ or 22.12+** (Vite 7). Check with `node --version`; with nvm run `nvm use`.
+
 ```bash
 npm install
 npm run dev        # API on :4000 and web on :5173
