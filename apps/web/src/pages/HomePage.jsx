@@ -1,11 +1,30 @@
-import { CtaSection, PageHero } from "../components/sections/index.js";
+import {
+  ConnectedPlatformBand,
+  HeroCarousel,
+  ManufacturingHome,
+  PlatformSection,
+  RecentUpdates,
+  TransformationSpotlight
+} from "../components/home/index.js";
+import { HealthcareHomeBand } from "../components/healthcare/index.js";
+import { CtaSection, QualityBand, StatsBand } from "../components/sections/index.js";
 
-// TODO: port from the v58 prototype. Temporary stub so the shell builds.
 export function HomePage() {
   return (
     <>
-      <PageHero label="Home" title={["Page port in progress.", "Content follows the approved design."]} text="This page is being rebuilt from the approved prototype." img="homepage-hero-api-v31.jpg" alt="" />
-      <CtaSection />
+      <HeroCarousel />
+      <StatsBand />
+      <ConnectedPlatformBand />
+      <PlatformSection />
+      <RecentUpdates />
+      <TransformationSpotlight />
+      <ManufacturingHome />
+      <QualityBand />
+      <HealthcareHomeBand />
+      <CtaSection
+        title="Build the next program together."
+        text="For APIs, development, analytical work or commercial manufacturing, start with a non-confidential discussion of your requirement."
+      />
     </>
   );
 }

@@ -1,11 +1,30 @@
+import {
+  AnnualReports,
+  InvestorContacts,
+  InvestorDisclosures,
+  InvestorKpis,
+  InvestorPresentations
+} from "../components/investors/index.js";
 import { CtaSection, PageHero } from "../components/sections/index.js";
 
-// TODO: port from the v58 prototype. Temporary stub so the shell builds.
 export function InvestorsPage() {
   return (
     <>
-      <PageHero label="Investors" title={["Page port in progress.", "Content follows the approved design."]} text="This page is being rebuilt from the approved prototype." img="ar-cover-2025-26.jpg" alt="" />
-      <CtaSection />
+      <PageHero
+        label="Investors"
+        title={["Performance first.", "Documents made easy."]}
+        text="Recent performance, investor presentations and annual reports come first. Statutory and shareholder information follows in a compact, structured library."
+        simple
+      />
+      <InvestorKpis />
+      <InvestorPresentations />
+      <AnnualReports />
+      <InvestorDisclosures />
+      <InvestorContacts />
+      <CtaSection
+        title="Stay close to the published record."
+        text="Recent presentations and annual reports lead the experience; all other investor information remains clearly organised behind them."
+      />
     </>
   );
 }

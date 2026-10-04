@@ -1,11 +1,57 @@
-import { CtaSection, PageHero } from "../components/sections/index.js";
+import { useCallback, useRef, useState } from "react";
+import { apiListUrl } from "@morepen/shared";
+import { ApiBackbone, ApiExplorer, ApiProofLine, ApiSupport, ProductDialog } from "../components/api/index.js";
+import { CtaSection, PageHero, QualityBand } from "../components/sections/index.js";
+import { ExtLink, ScrollLink } from "../components/ui/index.js";
 
-// TODO: port from the v58 prototype. Temporary stub so the shell builds.
 export function ApiPage() {
+  const [product, setProduct] = useState(null);
+  const triggerRef = useRef(null);
+
+  const openProduct = useCallback((item, trigger) => {
+    triggerRef.current = trigger;
+    setProduct(item);
+  }, []);
+
+  const closeProduct = useCallback(() => {
+    if (triggerRef.current?.isConnected) triggerRef.current.focus();
+    setProduct(null);
+  }, []);
+
   return (
     <>
-      <PageHero label="Active pharmaceutical ingredients" title={["Page port in progress.", "Content follows the approved design."]} text="This page is being rebuilt from the approved prototype." img="scientist-process.jpg" alt="" />
-      <CtaSection />
+      <PageHero
+        label="Active pharmaceutical ingredients"
+        title={[
+          "Deep chemistry.",
+          <span className="accent" key="accent">
+            A global API platform.
+          </span>
+        ]}
+        text="Explore Morepen APIs by therapeutic area, then connect with our team on the molecule, specification and documentation your program needs."
+        img="scientist-process.jpg"
+        alt="Morepen scientist working with pharmaceutical process-development equipment"
+        action={
+          <div className="buttons">
+            <ScrollLink target="api-collection">
+              Explore API portfolio <span aria-hidden="true">↓</span>
+            </ScrollLink>
+            <ExtLink href={apiListUrl} className="btn outline">
+              Download API list
+            </ExtLink>
+          </div>
+        }
+      />
+      <ApiProofLine />
+      <ApiExplorer onOpenProduct={openProduct} />
+      <ApiSupport />
+      <ApiBackbone />
+      <QualityBand />
+      <CtaSection
+        title="Let us discuss your API requirement."
+        text="Share the molecule, intended market and broad supply requirements. Do not send confidential chemistry until a suitable agreement is in place."
+      />
+      <ProductDialog product={product} onClose={closeProduct} />
     </>
   );
 }
