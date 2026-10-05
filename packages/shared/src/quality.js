@@ -1,7 +1,7 @@
 // Accreditation logos in carousel order (home, company, CDMO, API bands).
 // Entries with `file` render the logo image; entries with `code` render a text
-// badge (used while the supplied EDQM, KFDA, China NMPA and Taiwan FDA logo
-// files are corrupt and replacements are awaited).
+// badge (used while the supplied KFDA, China NMPA and Taiwan FDA logo files are
+// corrupt and replacements are awaited).
 export const accreditationLogos = [
   { file: "reg-health-canada-v26.png", name: "Health Canada" },
   { code: "TFDA", label: "Taiwan", name: "Taiwan FDA" },
@@ -10,27 +10,25 @@ export const accreditationLogos = [
   { code: "NMPA", label: "China", name: "China NMPA" },
   { file: "reg-anvisa-v26.png", name: "ANVISA Brazil" },
   { file: "reg-pmda-v26.webp", name: "PMDA Japan" },
-  { code: "EDQM", label: "Europe", name: "EDQM Europe" },
+  { file: "reg-edqm.jpg", name: "EDQM Europe" },
   { file: "reg-usfda-v26.png", name: "United States Food and Drug Administration" }
 ];
 
 // Consolidated credential matrix on the Quality page.
 export const credentialLogos = [
   { file: "reg-usfda-v26.png", name: "USFDA" },
-  { code: "EDQM", label: "Europe", name: "EDQM" },
+  { file: "reg-edqm.jpg", name: "EDQM" },
   { file: "reg-health-canada-v26.png", name: "Health Canada" },
   { code: "TFDA", label: "Taiwan", name: "Taiwan FDA" },
   { file: "reg-who-gmp-v26.jpg", name: "WHO-GMP" },
   { code: "KFDA", label: "Korea", name: "Korea KFDS / KFDA" },
   { code: "NMPA", label: "China", name: "China NMPA" },
   { file: "reg-anvisa-v26.png", name: "ANVISA Brazil" },
-  { file: "reg-pmda-v26.webp", name: "PMDA Japan" }
+  { file: "reg-pmda-v26.webp", name: "PMDA Japan" },
+  { file: "reg-eu-gmp.jpg", name: "EU-GMP" }
 ];
 
-export const credentialTextBadges = [
-  { code: "EU-GMP", label: "European Union GMP" },
-  { code: "TGA", label: "Australia" }
-];
+export const credentialTextBadges = [{ code: "TGA", label: "Australia" }];
 
 export const qualityFilters = ["All", "Regulatory inspections", "Certifications", "Awards & recognition"];
 
