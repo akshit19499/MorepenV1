@@ -7,7 +7,7 @@ export function ApiBackbone() {
   return (
     <section className="section pale">
       <div className="wrap split">
-        <EditorialImage file="analytical-lab.jpg" alt="Morepen analytical laboratory" />
+        <EditorialImage file="analytical-lab-wide.jpg" alt="Analysts at HPLC workstations in the Morepen analytical laboratory" />
         <div>
           <Eyebrow>Manufacturing &amp; R&amp;D backbone</Eyebrow>
           <h2>

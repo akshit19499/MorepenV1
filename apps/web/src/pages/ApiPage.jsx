@@ -29,8 +29,8 @@ export function ApiPage() {
           </span>
         ]}
         text="Explore Morepen APIs by therapeutic area, then connect with our team on the molecule, specification and documentation your program needs."
-        img="scientist-process.jpg"
-        alt="Morepen scientist working with pharmaceutical process-development equipment"
+        img="api-hero-lab.jpg"
+        alt="Morepen analyst running HPLC analysis in the quality-control laboratory"
         action={
           <div className="buttons">
             <ScrollLink target="api-collection">
