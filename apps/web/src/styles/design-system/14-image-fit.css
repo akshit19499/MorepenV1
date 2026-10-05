@@ -11,3 +11,10 @@
 .editorial-image:before {
   display: none;
 }
+
+/* Show the whole photograph: frames follow the image's own aspect ratio instead of cropping to a fixed height. */
+.page-hero-image,
+.editorial-image > img,
+.editorial-image.short > img {
+  height: auto;
+}

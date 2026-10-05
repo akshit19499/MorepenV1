@@ -1,13 +1,19 @@
 /* Contact page: mirrors the published morepen.com/contact layout using the design-system tokens. */
-.contact-banner {
+.page-banner {
   background: var(--ice);
 }
-.contact-banner img {
+.page-banner img {
   display: block;
   width: 100%;
   height: auto;
   max-height: 540px;
   object-fit: cover;
+}
+@media (max-width: 640px) {
+  /* Keep the baked-in title legible on phones: crop the sides instead of shrinking the whole banner. */
+  .page-banner img {
+    min-height: 200px;
+  }
 }
 .contact-section {
   padding-top: 56px;

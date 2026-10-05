@@ -10,3 +10,4 @@ export { FeatureList } from "./FeatureList.jsx";
 export { FinancialCards } from "./FinancialCards.jsx";
 export { RoadmapGrid } from "./RoadmapGrid.jsx";
 export { EditorialImage } from "./EditorialImage.jsx";
+export { PageBanner } from "./PageBanner.jsx";

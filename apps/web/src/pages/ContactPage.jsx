@@ -1,12 +1,13 @@
 import { useLocation } from "react-router-dom";
 import { contactOffices, contactPlants, contactUsaOffice, externalLinks, importantContacts } from "@morepen/shared";
-import { AdverseEventsNotice, ContactBanner, ContactCard, QueriesForm } from "../components/contact/index.js";
+import { AdverseEventsNotice, ContactCard, QueriesForm } from "../components/contact/index.js";
+import { PageBanner } from "../components/sections/index.js";
 
 export function ContactPage() {
   const location = useLocation();
   return (
     <>
-      <ContactBanner />
+      <PageBanner file="contact-banner.webp" alt="We are delighted to serve. Contact us." title="Contact us" focus="left center" />
       <section className="section contact-section">
         <div className="wrap">
           <div className="contact-card-grid">
