@@ -5,12 +5,17 @@ import {
   InvestorKpis,
   InvestorPresentations
 } from "../components/investors/index.js";
-import { CtaSection, PageBanner } from "../components/sections/index.js";
+import { CtaSection, PageHero } from "../components/sections/index.js";
 
 export function InvestorsPage() {
   return (
     <>
-      <PageBanner file="investor-banner.webp" alt="Get in touch with us. Investor Center." title="Investor centre" />
+      <PageHero
+        label="Investor centre"
+        title={["Investor Centre.", "Performance, presentations and reports."]}
+        text="The latest quarterly performance, investor presentations and annual reports come first. Statutory disclosures and shareholder information follow in a structured library."
+        simple
+      />
       <InvestorKpis />
       <InvestorPresentations />
       <AnnualReports />
