@@ -14,7 +14,8 @@ export function InvestorsPage() {
         label="Investor centre"
         title={["Investor Centre.", "Performance, presentations and reports."]}
         text="The latest quarterly performance, investor presentations and annual reports come first. Statutory disclosures and shareholder information follow in a structured library."
-        simple
+        img="investor-hero.jpg"
+        alt="Morepen corporate building with a rising growth chart and laboratory glassware"
       />
       <InvestorKpis />
       <InvestorPresentations />
