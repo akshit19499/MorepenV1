@@ -76,3 +76,8 @@
   padding-top: 6px;
   background: #fff;
 }
+
+/* Rx stage holds three packshots: pack, carton and blister. */
+.brand-rx .packshot-row .packshot { max-width: 32%; height: 150px; }
+.brand-rx .packshot-row .packshot:nth-child(2) { max-width: 40%; }
+.brand-large.brand-rx .packshot { height: 210px; }
