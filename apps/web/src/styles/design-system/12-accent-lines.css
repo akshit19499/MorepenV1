@@ -1,0 +1,14 @@
+/* The prototype drew thin skewed cyan accent lines with pseudo-elements on
+   heroes, editorial photos, tinted sections and the CTA band. They overlap
+   headings, photos and buttons at common screen widths, so they are removed
+   everywhere. The accent colour still appears in the eyebrow rules, the photo
+   backing plates and the card separators. */
+.hero-visual:before,
+.page-hero-grid:after,
+.page-hero.simple:after,
+.section.ice:after,
+.section.pale:after,
+.editorial-image:after,
+.cta-section:after {
+  display: none;
+}
