@@ -1,0 +1,13 @@
+/* Photos fill their rounded containers: no slanted clip-path and no offset backing plates. */
+.hero-visual > img,
+.page-hero-image,
+.editorial-image img {
+  clip-path: none;
+  border-radius: 16px;
+}
+.editorial-image {
+  padding: 0;
+}
+.editorial-image:before {
+  display: none;
+}

@@ -70,16 +70,9 @@
 
 /* Editorial photo captions: keep the backing plate off the caption and the
    caption above the plate so it stays readable. */
-.editorial-image:has(.image-source):before {
-  bottom: 48px;
-}
 .editorial-image .image-source {
   position: relative;
   z-index: 1;
   padding-top: 6px;
   background: #fff;
 }
-
-/* Plain editorial image: no offset backing plate, photo fills the column. */
-.editorial-image.plain { padding: 0; }
-.editorial-image.plain:before { display: none; }
