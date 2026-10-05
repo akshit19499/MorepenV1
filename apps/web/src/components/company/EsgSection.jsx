@@ -7,7 +7,7 @@ export function EsgSection() {
   return (
     <section className="section ice">
       <div className="wrap split">
-        <EditorialImage file="solar-2026.jpg" alt="Solar panels at Morepen manufacturing operations" />
+        <EditorialImage file="solar-2026.jpg" alt="Rooftop solar plant at Morepen manufacturing operations" plain />
         <div>
           <Eyebrow>Responsible manufacturing</Eyebrow>
           <h2>

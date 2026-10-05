@@ -79,3 +79,7 @@
   padding-top: 6px;
   background: #fff;
 }
+
+/* Plain editorial image: no offset backing plate, photo fills the column. */
+.editorial-image.plain { padding: 0; }
+.editorial-image.plain:before { display: none; }

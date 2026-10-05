@@ -19,7 +19,7 @@ export function SustainabilityPage() {
         title={["Continuity for customers.", "Responsibility in operations."]}
         text="Environmental infrastructure, resource stewardship and quality discipline are part of the manufacturing platform."
         img="solar-2026.jpg"
-        alt="Solar panels shown in Morepen Q1 FY27 presentation"
+        alt="Rooftop solar plant at Morepen manufacturing operations"
       />
       <SectionIntro
         kicker="Operating priorities"
