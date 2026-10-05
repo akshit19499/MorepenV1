@@ -21,7 +21,7 @@ export function SiteFooter() {
         <div className="footer-main">
           <div className="footer-brand">
             <Link to="/" aria-label="Morepen home">
-              <img src={asset("morepen-logo.png")} alt="Morepen" />
+              <img src={asset("morepen-logo-40.png")} alt="Morepen. 40 years of excellence. The joy of growing together." />
             </Link>
             <p>
               Building today.

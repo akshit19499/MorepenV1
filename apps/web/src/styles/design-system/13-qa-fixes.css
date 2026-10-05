@@ -92,15 +92,5 @@
   animation-duration: 45s;
 }
 
-/* Header brand: the 40-years lockup (badge + wordmark + tagline) needs more height than the plain wordmark. */
-.brand { gap: 0; }
-.brand img { width: 200px; height: auto; display: block; }
-.nav-wrap { min-height: 86px; }
-@media (max-width: 900px) {
-  .brand img { width: 164px; }
-  .nav-wrap { min-height: 72px; }
-}
-@media (max-width: 420px) {
-  .brand img { width: 150px; }
-}
-/* asset: morepen-logo-40.png */
+/* Footer brand: the 40-years lockup (badge + wordmark + tagline). */
+.footer-brand img { width: 250px; max-width: 100%; height: auto; display: block; }

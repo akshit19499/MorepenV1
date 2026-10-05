@@ -64,7 +64,8 @@ export function SiteHeader() {
     <header className={`site-header${scrolled ? " scrolled" : ""}`}>
       <div className="wrap nav-wrap">
         <Link className="brand" to="/" aria-label="Morepen home">
-          <img src={asset("morepen-logo-40.png")} alt="Morepen. 40 years of excellence. The joy of growing together." />
+          <img src={asset("morepen-logo.png")} alt="Morepen" />
+          <span>LABORATORIES LIMITED</span>
         </Link>
         <button
           ref={menuRef}
