@@ -1,11 +1,12 @@
 import { HealthcareCards, HealthcareSubnav } from "../components/healthcare/index.js";
-import { CtaSection, PageHero, SectionHeading, SectionIntro } from "../components/sections/index.js";
+import { CtaSection, PageBanner, PageHero, SectionHeading, SectionIntro } from "../components/sections/index.js";
 import { GoLink } from "../components/ui/index.js";
 import { healthcareGuide } from "../content/healthcare.js";
 
 export function HealthcarePage() {
   return (
     <>
+      <PageBanner file="healthcare-banner.webp" alt="Dr. Morepen healthcare brands" focus="left center" />
       <PageHero
         label="Healthcare Businesses"
         title={["Distinct businesses.", "A shared healthcare purpose."]}

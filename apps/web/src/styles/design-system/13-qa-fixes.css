@@ -81,3 +81,13 @@
 .brand-rx .packshot-row .packshot { max-width: 32%; height: 150px; }
 .brand-rx .packshot-row .packshot:nth-child(2) { max-width: 40%; }
 .brand-large.brand-rx .packshot { height: 210px; }
+
+/* Credentials carousel: the keyframes were missing, so the duplicated track never moved.
+   Half the track width is one full set of logos (minus half the gap between the two sets). */
+@keyframes accreditationScrollV26 {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 4.5px)); }
+}
+.accreditation-track-v26 {
+  animation-duration: 45s;
+}
