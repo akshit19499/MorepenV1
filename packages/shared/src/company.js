@@ -1,6 +1,6 @@
 export const executiveLeaders = [
-  { name: "Mr. Sushil Suri", role: "Chairman & Managing Director", photo: "https://www.morepen.com/public/img/mr%20sushil%20suri.jpg" },
-  { name: "Mr. Sanjay Suri", role: "Managing Director", photo: "https://www.morepen.com/public/img/Mr.%20Sanjay%20Suri.jpg" }
+  { name: "Mr. Sushil Suri", role: "Chairman & Managing Director", photo: "sushil-suri.jpg" },
+  { name: "Mr. Sanjay Suri", role: "Managing Director", photo: "sanjay-suri.jpg" }
 ];
 
 export const boardOfDirectors = [

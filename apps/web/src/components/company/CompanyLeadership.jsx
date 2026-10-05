@@ -1,6 +1,7 @@
 import { boardCommittees, boardOfDirectors, executiveLeaders, externalLinks, managementTeam } from "@morepen/shared";
 import { useDialog } from "../../hooks/useDialog.js";
 import { Eyebrow, ExtLink } from "../ui/index.js";
+import { asset } from "../../lib/assets.js";
 
 // Native <dialog> used for the board, management and committee lists.
 function GovernanceDialog({ id, dialogRef, kicker, title, note, children }) {
@@ -70,7 +71,7 @@ export function CompanyLeadership() {
               {executiveLeaders.map((leader) => (
                 <article className="leadership-v23-person" key={leader.name}>
                   <div className="leadership-v23-photo">
-                    <img src={leader.photo} alt={leader.name} loading="lazy" decoding="async" />
+                    <img src={asset(leader.photo)} alt={leader.name} loading="lazy" decoding="async" />
                   </div>
                   <div className="leadership-v23-info">
                     <h3>{leader.name}</h3>
