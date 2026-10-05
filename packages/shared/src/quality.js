@@ -1,13 +1,11 @@
 // Accreditation logos in carousel order (home, company, CDMO, API bands).
-// Entries with `file` render the logo image; entries with `code` render a text
-// badge (used while the supplied KFDA, China NMPA and Taiwan FDA logo files are
-// corrupt and replacements are awaited).
+// Entries with `file` render the logo image; entries with `code` render a text badge.
 export const accreditationLogos = [
   { file: "reg-health-canada-v26.png", name: "Health Canada" },
-  { code: "TFDA", label: "Taiwan", name: "Taiwan FDA" },
+  { file: "reg-taiwan-fda.png", name: "Taiwan FDA" },
   { file: "reg-who-gmp-v26.jpg", name: "WHO-GMP" },
-  { code: "KFDA", label: "Korea", name: "Korea Food and Drug Administration" },
-  { code: "NMPA", label: "China", name: "China NMPA" },
+  { file: "reg-kfda.png", name: "Korea Food and Drug Administration" },
+  { file: "reg-china-nmpa.png", name: "China NMPA" },
   { file: "reg-anvisa-v26.png", name: "ANVISA Brazil" },
   { file: "reg-pmda-v26.webp", name: "PMDA Japan" },
   { file: "reg-edqm.jpg", name: "EDQM Europe" },
@@ -19,10 +17,10 @@ export const credentialLogos = [
   { file: "reg-usfda-v26.png", name: "USFDA" },
   { file: "reg-edqm.jpg", name: "EDQM" },
   { file: "reg-health-canada-v26.png", name: "Health Canada" },
-  { code: "TFDA", label: "Taiwan", name: "Taiwan FDA" },
+  { file: "reg-taiwan-fda.png", name: "Taiwan FDA" },
   { file: "reg-who-gmp-v26.jpg", name: "WHO-GMP" },
-  { code: "KFDA", label: "Korea", name: "Korea KFDS / KFDA" },
-  { code: "NMPA", label: "China", name: "China NMPA" },
+  { file: "reg-kfda.png", name: "Korea KFDS / KFDA" },
+  { file: "reg-china-nmpa.png", name: "China NMPA" },
   { file: "reg-anvisa-v26.png", name: "ANVISA Brazil" },
   { file: "reg-pmda-v26.webp", name: "PMDA Japan" },
   { file: "reg-eu-gmp.jpg", name: "EU-GMP" }
