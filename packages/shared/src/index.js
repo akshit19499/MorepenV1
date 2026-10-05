@@ -5,5 +5,6 @@ export * from "./investors.js";
 export * from "./quality.js";
 export * from "./manufacturing.js";
 export * from "./contact.js";
+export * from "./countries.js";
 export * from "./company.js";
 export * from "./healthcare.js";

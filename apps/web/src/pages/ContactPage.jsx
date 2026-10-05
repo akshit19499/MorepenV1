@@ -1,22 +1,40 @@
 import { useLocation } from "react-router-dom";
-import { ContactDetails, EnquiryForm } from "../components/contact/index.js";
-import { PageHero } from "../components/sections/index.js";
+import { contactOffices, contactPlants, contactUsaOffice, externalLinks, importantContacts } from "@morepen/shared";
+import { AdverseEventsNotice, ContactBanner, ContactCard, QueriesForm } from "../components/contact/index.js";
 
 export function ContactPage() {
   const location = useLocation();
   return (
     <>
-      <PageHero
-        label="Partner with Morepen"
-        title={["A conversation today.", "A partnership tomorrow."]}
-        text="Tell us what you are looking to develop, manufacture or source. Keep the first introduction non-confidential."
-        simple
-      />
-      <section className="section">
-        <div className="wrap contact-grid">
-          <ContactDetails />
-          {/* A new ?service / ?product query starts a fresh form, as the prototype re-rendered the page. */}
-          <EnquiryForm key={location.search} />
+      <ContactBanner />
+      <section className="section contact-section">
+        <div className="wrap">
+          <div className="contact-card-grid">
+            {contactOffices.map((card) => (
+              <ContactCard key={card.id} card={card} />
+            ))}
+          </div>
+          <p className="contact-support-link">
+            For customer support Fill{" "}
+            <a href={externalLinks.customerSupport} target="_blank" rel="noopener">
+              Customer Support Form
+            </a>
+          </p>
+          <h2 className="contact-section-title" id="queries">
+            Queries
+          </h2>
+          {/* A new ?service / ?product query starts a fresh form. */}
+          <QueriesForm key={location.search} />
+          <AdverseEventsNotice />
+          <div className="contact-card-grid">
+            {contactPlants.map((card) => (
+              <ContactCard key={card.id} card={card} />
+            ))}
+          </div>
+          <div className="contact-card-grid">
+            <ContactCard card={contactUsaOffice} />
+            <ContactCard card={importantContacts} />
+          </div>
         </div>
       </section>
     </>

@@ -44,7 +44,18 @@ npm run build      # production bundle for apps/web
 npm run lint       # ESLint for apps/web
 ```
 
-Set `apps/api/.env` from `apps/api/.env.example` when connecting MongoDB.
+Set `apps/api/.env` from `apps/api/.env.example` when connecting MongoDB, and
+`apps/web/.env` from `apps/web/.env.example` if the API runs anywhere other than
+`http://localhost:4000`.
+
+## Contact enquiries
+
+The Contact page form posts to `POST /api/enquiries`. The API validates the
+submission (required fields, email format, known department and country, plus a
+honeypot field for bots) and stores it in the `enquiries` MongoDB collection when
+`MONGODB_URI` is set; without a database it accepts the enquiry and logs it. Calls
+to action elsewhere on the site link to `/contact?service=<department>` (and
+`&product=<name>` from the API catalogue) to preselect the department and subject.
 
 ## Routes
 

@@ -14,20 +14,13 @@ export function PrivacyPage() {
         <div className="wrap legal-copy">
           <h3>How enquiries are handled</h3>
           <p>
-            The enquiry form processes your input in the current browser session to display a summary. It does not submit
-            information to a server, store it in a database or save it in browser storage. Navigate away or reload to
-            clear the form.
-          </p>
-          <h3>Email is a separate, deliberate step</h3>
-          <p>
-            Choosing "Open email draft" attempts to open your email application with the prepared text. No email is sent
-            automatically. You must review the content and recipient before sending.
+            The enquiry form sends only the details you enter to Morepen's website service so the selected department
+            can respond. Nothing is saved in your browser, and no attachments are accepted.
           </p>
           <h3>External links</h3>
           <p>
-            Official Morepen documents, contact pages and other external destinations require internet access and are
-            governed by those destinations' policies. This local preview has no analytics, cookies or third-party tracking
-            scripts.
+            Official Morepen documents, contact pages and other external destinations are governed by those
+            destinations' policies. This website sets no analytics or marketing cookies.
           </p>
           <h3>Keep it non-confidential</h3>
           <p>

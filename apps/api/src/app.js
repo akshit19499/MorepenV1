@@ -2,7 +2,8 @@ import cors from "cors";
 import express from "express";
 import {
   apiCategories,
-  contactServices,
+  countries,
+  enquiryDepartments,
   filterProducts,
   financialHighlights,
   investorDocuments,
@@ -13,6 +14,7 @@ import {
   qualityRecords,
   routes
 } from "@morepen/shared";
+import { handleEnquiry } from "./enquiries.js";
 
 export function createApp() {
   const app = express();
@@ -60,23 +62,18 @@ export function createApp() {
     res.json({ records: qualityRecords });
   });
 
-  app.get("/api/contact-topics", (_req, res) => {
-    res.json({ topics: contactServices });
+  app.get("/api/enquiry-options", (_req, res) => {
+    res.json({ departments: enquiryDepartments, countries });
   });
 
-  app.post("/api/enquiries", (req, res) => {
-    const { name, email, company, country, service, stage, message } = req.body || {};
-    if (!name || !email || !company || !service || !message) {
-      res.status(400).json({ error: "Name, company, email, area of interest and message are required." });
-      return;
-    }
+  app.post("/api/enquiries", (req, res, next) => {
+    handleEnquiry(req, res).catch(next);
+  });
 
-    res.status(202).json({
-      ok: true,
-      message:
-        "Enquiry validated. Persistence and email delivery should be connected after final approval.",
-      enquiry: { name, email, company, country: country || "", service, stage: stage || "", message }
-    });
+  // eslint-disable-next-line no-unused-vars
+  app.use((error, _req, res, _next) => {
+    console.error("[api] unhandled error", error);
+    res.status(500).json({ error: "Something went wrong. Please try again later." });
   });
 
   return app;

@@ -58,6 +58,7 @@ export const externalLinks = {
   careers: "https://www.morepen.com/careers",
   adverseEvent: "https://www.morepen.com/adverseevent",
   customerSupport: "https://www.morepen.com/customersupport",
+  grievance: "https://www.morepen.com/contact",
   environmental: "https://www.morepen.com/etp",
   devices: "https://devices.drmorepen.com/",
   deviceSync: "https://sync.drmorepen.com/",

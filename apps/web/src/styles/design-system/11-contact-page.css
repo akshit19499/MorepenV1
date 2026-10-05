@@ -1,0 +1,250 @@
+/* Contact page: mirrors the published morepen.com/contact layout using the design-system tokens. */
+.contact-banner {
+  background: var(--ice);
+}
+.contact-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 540px;
+  object-fit: cover;
+}
+.contact-section {
+  padding-top: 56px;
+}
+.contact-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 64px;
+  margin-bottom: 56px;
+}
+.contact-card h2 {
+  font-size: 24px;
+  letter-spacing: -0.4px;
+  color: var(--headline-sky, #16b9e8);
+  margin: 0 0 20px;
+}
+.contact-rows {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 16px 24px;
+  margin: 0;
+}
+.contact-rows .contact-row {
+  display: contents;
+}
+.contact-rows dt {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.contact-rows dd {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.contact-rows a {
+  color: var(--muted);
+}
+.contact-rows a:hover {
+  color: var(--blue);
+}
+.contact-support-link {
+  font-size: 16px;
+  color: var(--ink);
+  margin: 0 0 28px;
+}
+.contact-support-link a {
+  color: var(--headline-sky, #16b9e8);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.contact-section-title {
+  font-size: 30px;
+  letter-spacing: -0.5px;
+  color: var(--headline-sky, #16b9e8);
+  margin: 0 0 28px;
+}
+.queries-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 48px;
+  grid-template-areas:
+    "name department"
+    "company subject"
+    "country message"
+    "phone message"
+    "email message"
+    "grievance actions";
+  align-items: start;
+}
+.qf-name {
+  grid-area: name;
+}
+.qf-department {
+  grid-area: department;
+}
+.qf-company {
+  grid-area: company;
+}
+.qf-subject {
+  grid-area: subject;
+}
+.qf-country {
+  grid-area: country;
+}
+.qf-message {
+  grid-area: message;
+}
+.qf-phone {
+  grid-area: phone;
+}
+.qf-email {
+  grid-area: email;
+}
+.qf-grievance {
+  grid-area: grievance;
+}
+.qf-actions {
+  grid-area: actions;
+}
+.queries-grid .form-field {
+  gap: 10px;
+}
+.queries-grid .form-field label {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.queries-grid .form-field input,
+.queries-grid .form-field select,
+.queries-grid .form-field textarea {
+  min-height: 56px;
+  padding: 16px 18px;
+  font-size: 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(16, 42, 86, 0.06);
+}
+.queries-grid .form-field textarea {
+  min-height: 190px;
+  resize: vertical;
+}
+.queries-grid .form-field input::placeholder,
+.queries-grid .form-field textarea::placeholder {
+  color: #9aa4b1;
+}
+.queries-grid .contact-support-link {
+  margin: 0;
+  align-self: center;
+}
+.queries-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.captcha-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #f9f9f9;
+  font-size: 15px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.captcha-box input {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--blue);
+}
+.queries-submit {
+  min-width: 160px;
+  letter-spacing: 1px;
+}
+.queries-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+}
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.form-status {
+  margin: 24px 0 0;
+  padding: 16px 20px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+.form-status.success {
+  background: var(--ice);
+  border-left: 4px solid var(--headline-sky, #16b9e8);
+  color: var(--ink);
+}
+.form-status.error {
+  background: #fff4f4;
+  border-left: 4px solid #d64545;
+  color: #8a1f1f;
+}
+.contact-notice {
+  margin: 56px 0;
+  padding: 30px 34px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow-card, 0 8px 24px rgba(16, 42, 86, 0.06));
+  font-size: 18px;
+  line-height: 1.7;
+}
+.contact-notice p {
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+.contact-notice p:last-child {
+  margin-bottom: 0;
+}
+.contact-notice a {
+  color: var(--headline-sky, #16b9e8);
+}
+@media (max-width: 900px) {
+  .contact-card-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+  .contact-rows {
+    grid-template-columns: 130px 1fr;
+    gap: 12px 16px;
+  }
+  .queries-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "company"
+      "country"
+      "phone"
+      "email"
+      "department"
+      "subject"
+      "message"
+      "grievance"
+      "actions";
+  }
+  .contact-notice {
+    margin: 40px 0;
+    padding: 22px 24px;
+    font-size: 16px;
+  }
+}
