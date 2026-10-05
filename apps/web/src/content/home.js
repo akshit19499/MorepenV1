@@ -10,7 +10,7 @@ export const heroSlides = [
     text: "Established process chemistry, regulated-market manufacturing and global customer relationships form the scientific and manufacturing foundation of Morepen.",
     primary: { to: "api", label: "Explore APIs" },
     secondary: { to: "manufacturing", label: "Manufacturing & quality" },
-    image: "homepage-hero-api-v31.jpg",
+    image: "cleanroom-quality.jpg",
     alt: "Morepen API manufacturing suite",
     caption: "Chemistry built for reliable global supply.",
     captionRoute: "api",
