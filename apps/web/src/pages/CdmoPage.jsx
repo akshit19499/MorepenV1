@@ -17,7 +17,7 @@ export function CdmoPage() {
         label="CDMO & custom development"
         title={["From key intermediates", "to commercial supply."]}
         text="Morepen brings chemistry, analytical science, scale-up, drug-product development, quality systems and manufacturing together in one phase-appropriate development and supply platform."
-        img="mee-plant.jpg"
+        img="cdmo-hero-facility.jpg"
         alt="Morepen CDMO manufacturing facility"
         action={
           <div className="buttons">
