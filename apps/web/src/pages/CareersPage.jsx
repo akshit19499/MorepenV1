@@ -15,7 +15,7 @@ export function CareersPage() {
         label="Careers at Morepen"
         title={["Build what", "comes next."]}
         text="Bring your curiosity, technical expertise and commitment to quality to an evolving pharmaceutical platform."
-        img="team.jpg"
+        img="careers-team.jpg"
         alt="Team photograph in Morepen annual-report artwork"
         action={
           <div className="buttons">
