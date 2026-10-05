@@ -9,7 +9,7 @@ export function QualityPage() {
         label="Quality, accreditations & awards"
         title={["Technical confidence.", "Evidence with context."]}
         text="Quality systems and regulatory documentation are part of customer qualification, not decorative badges."
-        img="cleanroom-2026.jpg"
+        img="development-lab.jpg"
         alt="Morepen manufacturing cleanroom equipment"
       />
       <SectionIntro

@@ -7,7 +7,11 @@ export function BrandVisual({ kind, large = false }) {
   return (
     <div className={`brand-stage brand-${kind}${large ? " brand-large" : ""}`} data-brand-art={kind}>
       <div className="brand-masthead">
-        <Photo file={brand.logo} alt={`${brand.brand} logo`} className="brand-wordmark" />
+        {brand.logo ? (
+          <Photo file={brand.logo} alt={`${brand.brand} logo`} className="brand-wordmark" />
+        ) : (
+          <strong className="brand-wordmark brand-wordmark-text">{brand.brand}</strong>
+        )}
         <span>{brand.label}</span>
       </div>
       <div className="packshot-row">

@@ -20,11 +20,18 @@ export function AccreditationCarousel() {
   };
 
   const cards = (suffix) =>
-    accreditationLogos.map((logo) => (
-      <article className="accreditation-card-v26" key={`${logo.file}-${suffix}`}>
-        <Photo file={logo.file} alt={`${logo.name} logo`} />
-      </article>
-    ));
+    accreditationLogos.map((logo) =>
+      logo.file ? (
+        <article className="accreditation-card-v26" key={`${logo.file}-${suffix}`}>
+          <Photo file={logo.file} alt={`${logo.name} logo`} />
+        </article>
+      ) : (
+        <article className="accreditation-card-v26 text-badge" key={`${logo.code}-${suffix}`} aria-label={logo.name}>
+          <strong>{logo.code}</strong>
+          <span>{logo.label}</span>
+        </article>
+      )
+    );
 
   return (
     <div className="accreditation-strip-v26" aria-label="Global regulatory and quality credentials" ref={stripRef}>

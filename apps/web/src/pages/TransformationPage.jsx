@@ -15,7 +15,7 @@ export function TransformationPage() {
         label="Our transformation"
         title={["Evolution.", "Not a departure."]}
         text="APIs remain the scientific and manufacturing foundation. Morepen is building deeper capabilities, greater scale and longer-duration customer relationships on that base."
-        img="scale-up-2026.jpg"
+        img="mee-plant.jpg"
         alt="Manufacturing equipment from supplied Morepen presentation"
       />
       <SectionIntro

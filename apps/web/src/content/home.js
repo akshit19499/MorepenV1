@@ -24,7 +24,7 @@ export const heroSlides = [
     text: "Integrated development and manufacturing services connect key intermediates, API/drug substance, analytical science, drug product and commercial supply.",
     primary: { to: "cdmo", label: "Explore CDMO" },
     secondary: { to: "contact?service=CDMO", label: "Discuss a program" },
-    image: "scale-up-2026.jpg",
+    image: "development-lab.jpg",
     alt: "Morepen scale-up and manufacturing equipment",
     caption: "Development connected to commercial execution.",
     captionRoute: "cdmo",

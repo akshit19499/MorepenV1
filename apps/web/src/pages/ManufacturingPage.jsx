@@ -48,7 +48,7 @@ export function ManufacturingPage() {
       </section>
       <section className="section pale">
         <div className="wrap split">
-          <EditorialImage file="scale-up-2026.jpg" alt="Morepen process equipment" />
+          <EditorialImage file="mee-plant.jpg" alt="Morepen process equipment" />
           <div>
             <Eyebrow>Scale-up is a connected discipline</Eyebrow>
             <h2>Beyond reactor volume.</h2>

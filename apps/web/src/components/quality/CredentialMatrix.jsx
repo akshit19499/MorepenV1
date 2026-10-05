@@ -23,11 +23,18 @@ export function CredentialMatrix() {
           </p>
         </SectionHeading>
         <div className="quality-logo-grid-v51">
-          {credentialLogos.map((logo) => (
-            <article className="quality-logo-card-v51" key={logo.file}>
-              <Photo file={logo.file} alt={`${logo.name} logo`} />
-            </article>
-          ))}
+          {credentialLogos.map((logo) =>
+            logo.file ? (
+              <article className="quality-logo-card-v51" key={logo.file}>
+                <Photo file={logo.file} alt={`${logo.name} logo`} />
+              </article>
+            ) : (
+              <article className="quality-logo-card-v51 text-badge" key={logo.code} aria-label={logo.name}>
+                <strong>{logo.code}</strong>
+                <span>{logo.label}</span>
+              </article>
+            )
+          )}
           {credentialTextBadges.map((badge) => (
             <article className="quality-logo-card-v51 text-badge" key={badge.code}>
               <strong>{badge.code}</strong>

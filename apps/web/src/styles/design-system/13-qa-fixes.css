@@ -1,0 +1,81 @@
+/* QA fixes on top of the ported design system. */
+
+/* Sticky header: Chromium smears a white band when a sticky element uses
+   backdrop-filter while the page scrolls. The header is opaque anyway. */
+.site-header {
+  background: #fff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* CDMO expertise chips had no layout rules in the prototype and rendered as
+   run-on text. */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+}
+.chip {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid #dce5eb;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+/* Text badges stand in for regulator logos whose supplied files are corrupt. */
+.accreditation-card-v26.text-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-align: center;
+  color: var(--headline-blue, #075aae);
+}
+.accreditation-card-v26.text-badge strong {
+  font-size: 20px;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+}
+.accreditation-card-v26.text-badge span {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--smoke-text-soft, #7a8590);
+}
+
+/* Brand name as text where the supplied logo file is corrupt. */
+.brand-wordmark-text {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--headline-blue, #075aae);
+}
+
+/* Closing panels on tinted sections: the later .section.ice/.pale background
+   rule outranked the closing-panel colour, leaving white text on a light panel
+   (Rx page). Give the closing panel precedence. */
+.section.ice.page-end-panel,
+.section.pale.page-end-panel {
+  background: var(--closing-panel);
+}
+
+/* Editorial photo captions: keep the backing plate off the caption and the
+   caption above the plate so it stays readable. */
+.editorial-image:has(.image-source):before {
+  bottom: 48px;
+}
+.editorial-image .image-source {
+  position: relative;
+  z-index: 1;
+  padding-top: 6px;
+  background: #fff;
+}
